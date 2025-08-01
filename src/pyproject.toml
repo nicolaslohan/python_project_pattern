@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "my_project"
+version = "1.1.2"
+description = "Meu Projeto"
+authors = [
+    { name = "Seu Nome", email = "seuemail@email.com" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[tool.bumpver]
+version_pattern = "MAJOR.MINOR.PATCH"
+current_version = "1.1.2"
+commit_message = "bump version {old_version} -> {new_version}"
+tag_message = "{new_version}"
+tag_scope = "default"
+commit = true
+tag = true
+push = false
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = [
+    '^version = "{version}"',
+    '^current_version = "{version}"',
+]
