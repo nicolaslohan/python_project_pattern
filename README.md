@@ -45,6 +45,26 @@ uv pip install -r requirements.txt
 
 Mais detalhes e instruções: [https://github.com/astral-sh/uv](https://github.com/astral-sh/uv)
 
+## Controle de Versão com bumpver
+
+Este projeto recomenda o uso do [bumpver](https://github.com/mbarkhau/bumpver) para controle e atualização automática de versão.
+
+### Instalação do bumpver
+```bash
+pip install bumpver
+```
+
+### Como usar
+- Para atualizar a versão (patch, minor ou major):
+  ```bash
+  bumpver update --patch   # Para atualizar o patch (ex: 1.0.0 → 1.0.1)
+  bumpver update --minor   # Para atualizar o minor (ex: 1.0.0 → 1.1.0)
+  bumpver update --major   # Para atualizar o major (ex: 1.0.0 → 2.0.0)
+  ```
+- O bumpver atualiza automaticamente o campo de versão no `pyproject.toml` e outros arquivos configurados.
+
+Mais detalhes e configurações avançadas: [https://github.com/mbarkhau/bumpver](https://github.com/mbarkhau/bumpver)
+
 ## Instruções de Instalação
 1. Clone o repositório ou copie os arquivos para seu ambiente local.
 2. (Opcional) Crie um ambiente virtual:
